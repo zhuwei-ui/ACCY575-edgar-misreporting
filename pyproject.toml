@@ -7,11 +7,15 @@ requires-python = ">=3.15"
 dependencies = [
     "anthropic>=2.6.0",
     "edgartools==5.59.1",
+    "joblib>=1.6.0",
     "numpy>=2.5.4",
     "pandas>=3.1.1",
     "pandera>=0.35.0",
     "pyarrow>=26.0.1",
+    "pyphen>=0.18.1",
     "python-dotenv>=1.2.4",
+    "scikit-learn>=1.9.1",
+    "scipy>=1.18.1",
 ]
 
 [dependency-groups]

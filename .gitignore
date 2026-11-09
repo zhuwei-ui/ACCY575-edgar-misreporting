@@ -11,6 +11,7 @@ __pycache__/
 data/raw/
 data/interim/
 data/final/
+data/features/
 *.parquet
 *.zip
 

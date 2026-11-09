@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Secrets
+.env
+.env.*
+
+# Data — public, but far too large for Git (data/labels/ and test fixtures under tests/ stay committable)
+data/raw/
+data/interim/
+data/final/
+*.parquet
+*.zip
+
+# Logs from long runs
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/settings.json
+.idea/

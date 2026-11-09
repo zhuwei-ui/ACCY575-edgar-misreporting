@@ -1,0 +1,31 @@
+event_id,restated_fyears,irregularity,notes
+1124127-1,2010,False,FY2010 10-K plus Q1-Q3 2011 10-Qs (deferred tax valuation allowance).
+1125280-1,2013,False,"Q3 2013 10-Q, FY2013 10-K, Q1 2014 10-Q. Re-audit in progress; no fraud/investigation language."
+1139822-1,2011,False,"CHECK: prior auditor withdrew its FY2011 audit report (missing workpapers, no concurring review) - an audit-report non-reliance, not an accounting error. Kept FY2011 as restated per the rule."
+1168663-1,2010,False,"CHECK: garbled text. Restates 'the quarter year ended December 31, 2010'; the FY2009 10-K is mentioned only as 'discussed', not declared unreliable. Labeled 2010 only."
+1357615-1,2013,False,"CHECK irregularity: KBR FY2013 only (Q1 2014 10-Q not yet filed). Audit Committee 'retained independent legal and accounting advisors to review these matters' - a review, not called an investigation; labeled False."
+1392363-1,2017,False,"FYE June 30: FY ended 2017-06-30 -> 2017; quarters Sep 2017, Dec 2017, Mar 2018 fall in FY ending 2018-06-30 -> 2018. (Text contains a typo date 'September 28, 2017'.)"
+1399352-1,2012,False,FY2012 10-K (omitted warrants).
+1409916-1,2014,False,CHECK: FY2014 10-K 'including financial information contained therein for prior periods' plus Q1-Q2 2015. FY2013 appears only as a comparative inside the FY2014 10-K (no separate FY2013 10-K); not labeled.
+1414295-2,2011,False,FYE June 30: FY ended 2011-06-30 -> 2011; Q Sep 2011 and Dec 2011 -> FY ending 2012-06-30 -> 2012.
+1498382-1,2013;2015,False,"Rule: FYE June 30 2015 -> fyear 2015 (Compustat); no June-2014 10-K on file, so 2014 dropped; quarters Mar/Jun 2013 -> 2013."
+1516805-2,2015,False,"FYE Sep 30: FY ended 2015-09-30 plus quarters Mar 2015 and Jun 2015, all fiscal 2015."
+1552189-1,,False,Q2 2021 10-Q only (related-party sale booked as revenue; 10-Q not reviewed by auditor). No fraud/investigation language.
+1563568-1,,False,Q1-Q3 2022 10-Qs only.
+1664038-1,,False,"FYE Nov 30: quarters ended Feb 28, May 31, Aug 31 2017 -> fiscal 2017. Auditor notice under 4.02(b)."
+1711786-1,2023,False,"FY2023 10-K and interim periods Q1-Q3 of 2023 and 2024. Balances 'as of December 31, 2022 and 2021' are described as affected but not declared unreliable; not labeled."
+1784168-1,2020,False,Rule: no 10-K for 2019 (inception-through-2019 period appears only as a comparative) -> 2020 only.
+1803977-1,2022;2023,False,FY2023 and FY2022 10-K plus Q3 2023. Mentions SEC order against former auditor BF Borgers - not an investigation of the company; labeled False.
+1820931-1,2020,False,"SPAC warrants. Inception (Aug 2020) through Dec 31 2020, Q3 2020, IPO balance sheet Sep 2020 - all fiscal 2020."
+1821318-2,2020,False,SPAC share classification (Nov 2021 wave). FY2020 plus Q1-Q3 2021.
+1821682-2,2020,False,"SPAC share classification. IPO balance sheet Oct 2020, inception through Dec 31 2020, Q1-Q3 2021."
+1822835-2,2020,False,"SPAC share classification. IPO balance sheet Nov 2020, period ended Dec 31 2020, Q1-Q2 2021."
+1845437-1,,False,"Rule: FY2021 10-K filed 2022-03-30, after the 8-K (2022-02-24); only IPO balance sheet and Q2-Q3 2021 -> none."
+1862068-1,2023,False,FY2023 10-K plus Q2 and Q3 2023 (NCI reclassification).
+1865506-1,2023,False,"FY2023 statements (filed in a Super 8-K) plus Q1 2024. Text also has a typo 'March 31, 2023 period'."
+731653-1,,False,CHECK: saved section is EMPTY (extraction found no Item 4.02 text - logged not_found). Cannot label from the section; consider reading the filing on EDGAR or excluding this event from scoring.
+799850-1,2023,False,"CHECK: FYE April 30. Company's 'fiscal 2024' = year ended 2024-04-30 -> Compustat fyear 2023; 'fiscal 2025' quarters through Jan 31 2025 -> fyear 2024. Disclosure-only omission (loan modifications), no earnings impact."
+842717-1,2022,False,FY2022 10-K plus Q1 and Q2 2023 (bank loan nonaccrual timing). 'Primary regulator' consulted - not an investigation.
+861459-3,2018,True,Each quarter of 2018 (annual not named). Evidence: 'the Audit Committee's independent Investigation of forecasts associated with projects in the Heavy Civil operating group'.
+896429-1,2017,True,"FYE June 30: FY ended 2017-06-30 -> 2017; quarters Sep 2017, Dec 2017, Mar 2018 -> 2018 (no FY2018 10-K filed yet; period_to_fyear rolls forward). Evidence: 'the Audit Committee has substantially completed its internal investigation'; auditor RSM can no longer rely on management representations."
+96885-1,,False,"Rule: FY2011 10-K (FYE 2012-03-31) filed 2012-07-16, after the 8-K (2012-07-13); only quarters restated -> none."

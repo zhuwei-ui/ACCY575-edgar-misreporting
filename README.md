@@ -154,6 +154,23 @@ The regex extractor's remaining errors are dates that are mentioned but not rest
 
 The panel has 3,360 restated rows, against 3,583 labeled CIK-years; the other 223 have no 10-K in the panel.
 
+## Module 9: replicating Brown, Crowley & Elliott (2020)
+
+Reads only `data/final/panel.parquet` and the 10-K text files, with no network calls. The predictions, results and discussion are in [results.md](results.md).
+
+| # | Command | Output | Time |
+|---|---|---|---|
+| 1 | `uv run python -m src.features_financial` | `data/features/financial.parquet` | seconds |
+| 2 | `uv run python -m src.eval_sample` | `data/features/eval_sample.parquet` (6,213 CIK-years) | seconds |
+| 3 | `uv run python -m src.features_style` | `data/features/style.parquet` | ~9 min |
+| 4 | `uv run python -m src.topics_dtm` | `data/features/dtm.npz`, `dtm_vocab.txt`, `dtm_rows.parquet` | ~1 min |
+| 5 | `uv run python -m src.topics_rolling` | `data/features/topics_{2016..2021}.parquet`, `lda/`, `results/m9/topics/` | ~7 min |
+| 6 | `uv run python -m src.evaluate` | `results/m9/auc.csv`, `auc_diff.csv`, `coefs.csv` | ~1 min |
+
+Robustness runs:
+- **Stopword threshold:** `topics_rolling --tag _df0025 --min-df-share 0.0025`, then `evaluate --topics-tag _df0025 --out-tag _df0025`.
+- **Without the warrant wave:** `evaluate --drop-warrant-wave --out-tag _nowave`.
+
 ## Deviations and judgment calls
 
 1. **Wrong period dates entered by filers (`period_mismatch`).** In 186 rows the FSDS balance-sheet date differs from the filer-entered `reportDate` by more than 31 days, and about 40 of these would move to a different fyear. Decision: keep §5's fyear and flag the rows rather than correct them.
